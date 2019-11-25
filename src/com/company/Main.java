@@ -8,8 +8,24 @@ public class Main {
             total = total + (i * i);
         }
         System.out.println(total);
-    }
+    public static void rollASix() {
+        int rollDice = 0;
 
+        while (rollDice != 6) {
+            rollDice = (int) (Math.random() * 6 + 1);
+            System.out.println("You rolled: " + rollDice);
+
+            if (rollDice == 3) {
+                break;
+            }
+        }
+        if (rollDice == 6) {
+            System.out.println("You Win!!!");
+        } else {
+            System.out.println("You Lose");
+        }
+
+    }
     public static void main(String[] args) {
         // this program will create an inner and outer loop
         for(int i=0; i<3; i++){
@@ -18,6 +34,9 @@ public class Main {
                 System.out.println("\tInner Loop " + j + ": Hi Everyone!");
             }
         }
+        rollASix();
         countBlocks(5);
+
+
     }
 }
